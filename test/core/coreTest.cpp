@@ -361,8 +361,7 @@ bool TestCommand(const std::string &UnitName, std::string &LastModName,
     /// TODO: Add processing binary cases.
     return true;
   } else if (CmdType == "assert_invalid") {
-    /// TODO: Fix validator for passing all tests.
-    /*
+    /// TODO: Error message checking.
     std::string FileName = TestSuiteRoot + "/" + UnitName + "/" +
                            ItCmd->GetObject()["filename"].GetString();
     if (VM.loadWasm(FileName)) {
@@ -370,7 +369,6 @@ bool TestCommand(const std::string &UnitName, std::string &LastModName,
         return false;
       }
     }
-    */
     return true;
   } else if (CmdType == "assert_unlinkable" ||
              CmdType == "assert_uninstantiable") {
